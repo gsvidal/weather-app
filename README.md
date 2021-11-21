@@ -1,13 +1,15 @@
 # Weather App
+ <a href="https://www.gonzalovidal.dev/weather-app/">
+  <img src="https://i.postimg.cc/mgRp1wCY/weather-app.png">
+</a>
 
-A React application where we can get the cities we want, you just have to select in the Form and hit the get Weather Button, if the city name is not correct it will display a No Result alert, if it's correct will display some information like the Temperature in Celcius degrees, humidity, wind speed and pressure.
+Weather App is a React application where we can get the cities we want, you just have to select in the Form and hit the get Weather Button, if the city name is not correct it will display a No Result alert, if it's correct will display some information like the Temperature in Celcius degrees, humidity, wind speed and pressure.
 
 ## Project extra-features:
 
-### Extra data as an icon indicator if temperature is greater or less than 20°, or even if is less than 10°
+### Icon indicator if temperature is greater or less than 20°, or even if is less than 10°
 ### Loader component while is retrieving data (successfully or not)
 ### Documenting components with propTypes declarations
-
 
 # Getting Started with Create React App
 
