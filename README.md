@@ -8,7 +8,7 @@ A React application where we can get the cities we want, you just have to select
 ### Loader component while is retrieving data (successfully or not)
 ### Documenting components with propTypes declarations
 
-![Weather App preview](https://www.gonzalovidal.dev/weather-app/)
+![Weather App preview](https://i.postimg.cc/mgRp1wCY/weather-app.png)
 
 # Getting Started with Create React App
 
