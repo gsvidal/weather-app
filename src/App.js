@@ -43,7 +43,7 @@ function App() {
       }
     }
     fetchAPI();
-  },[query]);
+  },[query, city, country]);
 
   return (
     <Fragment>

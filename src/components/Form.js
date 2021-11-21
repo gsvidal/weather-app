@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'material-icons/iconfont/material-icons.css';
 import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Form = ({search, setSearch, setQuery, setLoading}) => {
 
@@ -33,9 +34,7 @@ const Form = ({search, setSearch, setQuery, setLoading}) => {
 
     // Starts Render the Spinner component
     setLoading(true);
-    // setResearch(true);
   }
-
 
   return(
     <form 
@@ -49,8 +48,26 @@ const Form = ({search, setSearch, setQuery, setLoading}) => {
         component="Form"
       />}
       <div className="input-field col s12">
+        <select 
+            name="country"  
+            id="country"
+            value={country}
+            onChange={handleChange}
+          >
+            <option value="">-- Select a country --</option>
+            <option value="US">Estados Unidos</option>
+            <option value="MX">México</option>
+            <option value="AR">Argentina</option>
+            <option value="CO">Colombia</option>
+            <option value="CR">Costa Rica</option>
+            <option value="ES">España</option>
+            <option value="PE">Perú</option>
+          </select>
+          <label htmlFor="country">Country</label>
+      </div>
+      <div className="input-field col s12">
         <input 
-          autocomplete="off"
+          autoComplete="nope"
           type="text"
           name="city"
           id="city"  
@@ -58,24 +75,6 @@ const Form = ({search, setSearch, setQuery, setLoading}) => {
           onChange={handleChange}
         />
         <label htmlFor="city">City:</label>
-      </div>
-      <div className="input-field col s12">
-        <select 
-          name="country"  
-          id="country"
-          value={country}
-          onChange={handleChange}
-        >
-          <option value="">-- Select a country --</option>
-          <option value="US">Estados Unidos</option>
-          <option value="MX">México</option>
-          <option value="AR">Argentina</option>
-          <option value="CO">Colombia</option>
-          <option value="CR">Costa Rica</option>
-          <option value="ES">España</option>
-          <option value="PE">Perú</option>
-        </select>
-        <label htmlFor="country">Country</label>
       </div>
       <div className="input-field col s12">
         <button
@@ -88,6 +87,13 @@ const Form = ({search, setSearch, setQuery, setLoading}) => {
       </div>
     </form>
   );
+}
+
+Form.propTypes = {
+  search: PropTypes.object.isRequired, 
+  setSearch: PropTypes.func.isRequired, 
+  setQuery: PropTypes.func.isRequired, 
+  setLoading: PropTypes.func.isRequired
 }
 
 export default Form;

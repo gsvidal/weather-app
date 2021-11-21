@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Weather = ({data}) => {
 
-  console.log(data);
   // Extract info
   const { name, main, wind } = data;
 
@@ -22,9 +22,9 @@ const Weather = ({data}) => {
       <div className="card-panel white col s12">
         <div className="black-text">
           <h2 className="weather-city">{name}</h2>
-          <p className="temperature">
+          <div className="temperature">
            <span className={`icon-temp icon-temp--${modifier}`}></span> <p> { temp } <span> &#x2103; </span></p>
-          </p>
+          </div>
           <p>
             {`Max Temp:  ${tempMax}`} <span> &#x2103; </span>
           </p>
@@ -40,6 +40,10 @@ const Weather = ({data}) => {
       </div>
     </Fragment>
   )
+}
+
+Weather.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default Weather;
